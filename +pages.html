@@ -34,7 +34,7 @@
 
       <div id="skills" class="p-4 pb-0 pt-0">
         <h1 class="p-1 text-lg font-bold">Skills & Tools 🛠️</h1>
-        <div id="skills-root" class="flex max-h-[100px] max-w-[550px] flex-col flex-wrap gap-2"></div>
+        <div id="skills-root" class="flex max-h-[200px] max-w-[550px] flex-col flex-wrap gap-2"></div>
       </div>
 
       <div id="projects" class="p-4 pb-0 pt-0">
@@ -91,8 +91,10 @@
           }
         ],
         skills: [
+          { name: "Game Dev", tools: ["Unity", "C#", "C++", "Java", "Aseprite", "Blender"]},
           { name: "Web", tools: ["HTML", "CSS", "JavaScript", "Svelte.js", "Tailwind.css"] },
-          { name: "Video Editing", tools: ["After Effects", "Premiere Pro", "Media Encoder", "Capcut"] }
+          { name: "Video Editing", tools: ["After Effects", "Premiere Pro", "Media Encoder", "Capcut"]},
+          { name: "Books", tools: ["The Bible", "One2One by Steve Murrell", "Swipe Right", "Excellence in Leadership"]}
         ],
         projects: [
           {
@@ -115,7 +117,7 @@
             company: "Sanana Auto Supply",
             title: "Automation/System Development",
             type: "Part-time",
-            duration: { start: "2021-03-01", end: "2022-09-30" },
+            duration: { start: "2021-03-01", end: "2022-09-30"},
             position: "Developer",
             description: "I create automation and internal systems that help optimize, organize, and streamline our business operations."
           },
@@ -178,8 +180,10 @@
       "list": assetsBase + "list.svg",
       "c#" : assetsBase + "c-sharp.svg",
       "capcut": assetsBase + "capcut.svg",
-      "aseprite": assetsBase + "aseprite.svg"
-
+      "aseprite": assetsBase + "aseprite.svg",
+      "java": assetsBase + "java.svg",
+      "c++": assetsBase + "c-plus-plus.svg",
+      "blender": assetsBase + "blender.svg"
     };
     function iconForTool(tool) {
       const t = String(tool || "").toLowerCase();
@@ -187,17 +191,14 @@
         case "after effects": case "premiere pro": case "media encoder": case "photoshop":
         case "adobe cep": case "bolt cep": case "html": case "css": case "javascript":
         case "svelte.js": case "tailwind.css": case "google sheets": case "google workspace":
-        case "microsoft office": case "unity": case "c#": case "capcut": case "aseprite":
+        case "microsoft office": case "unity": case "c#": case "capcut": case "aseprite": 
+        case "java": case "c++": case "blender":
           return skillIcons[t];
         case "the bible":
-        case "strengths finder 2.0":
-        case "the 7 habits of highly effective people":
-        case "one 2 one by steve murrell":
-        case "the way of the shepherd by kevin leman and william pentak":
-        case "mentoring paradigms by edmund chan":
+        case "one2one by steve murrell":
+        case "swipe right":
+        case "excellence in leadership":
           return skillIcons["book"];
-        case "swot & soar analysis":
-          return skillIcons["list"];
         default:
           return "";
       }
