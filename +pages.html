@@ -8,7 +8,7 @@
   <main class="flex justify-center">
     <section id="sidebar" class="flex h-screen w-72 flex-col items-center justify-evenly bg-slate-900 text-sm text-slate-50">
       <div class="flex flex-col items-center gap-5">
-        <img id="profile-image" class="w-48 rounded-xl border-4" alt="pp" />
+        <img id="profile-image" class="w-48 rounded-xl border-4" alt="pp"/>
         <div class="flex flex-col items-center gap-1">
           <h1 id="profile-name" class="text-2xl font-bold"></h1>
           <div id="title" class="flex flex-col gap-1"></div>
@@ -73,21 +73,21 @@
         education: [
           {
             school: "University of Caloocan City",
-            tag: "(UCC)",
+            tag: "🎓",
             course: "Entertainment Multimedia Computing",
-            duration: { start: "2023-08-01", end: "Present" }
+            duration: { start: "August 2023", end: "Present" }
           },
           {
             school: "Divine Grace School",
-            tag: "(DGS)",
+            tag: "🎓",
             course: "Science, Technology, Engineering, and Mathematics",
-            duration: { start: "2021-08-01", end: "2023-05-31" }
+            duration: { start: "August 2021", end: "May 2023" }
           },
           {
             school: "Maligaya High School",
-            tag: "(MHS)",
+            tag: "🎓",
             course: "HS Student",
-            duration: { start: "2017-06-01", end: "2021-05-31" }
+            duration: { start: "June 2017", end: "March 2021" }
           }
         ],
         skills: [
@@ -117,7 +117,7 @@
             company: "Sanana Auto Supply",
             title: "Automation/System Development",
             type: "Part-time",
-            duration: { start: "2021-03-01", end: "2022-09-30"},
+            duration: { start: "March 2021", end: "September 2022"},
             position: "Developer",
             description: "I create automation and internal systems that help optimize, organize, and streamline our business operations."
           },
@@ -125,7 +125,7 @@
             company: "Sanana Auto Supply",
             title: "Salesman/Encoder",
             type: "Part-time",
-            duration: { start: "2021-03-01", end: "2022-09-30" },
+            duration: { start: "March 2021", end: "September 2022" },
             position: "Assistant",
             description: "I help my father manage his business by assisting in selling products and listing inventory items."
           }
@@ -188,11 +188,10 @@
     function iconForTool(tool) {
       const t = String(tool || "").toLowerCase();
       switch (t) {
-        case "after effects": case "premiere pro": case "media encoder": case "photoshop":
-        case "adobe cep": case "bolt cep": case "html": case "css": case "javascript":
-        case "svelte.js": case "tailwind.css": case "google sheets": case "google workspace":
-        case "microsoft office": case "unity": case "c#": case "capcut": case "aseprite": 
-        case "java": case "c++": case "blender":
+        case "after effects": case "premiere pro": case "media encoder": 
+        case "html": case "css": case "javascript": case "blender":
+        case "svelte.js": case "tailwind.css": case "unity": case "c#": 
+        case "capcut": case "aseprite": case "java": case "c++":
           return skillIcons[t];
         case "the bible":
         case "one2one by steve murrell":
