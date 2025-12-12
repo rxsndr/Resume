@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <main class="flex justify-center">
+    <section id="sidebar" class="flex h-screen w-72 flex-col items-center justify-evenly bg-slate-900 text-sm text-slate-50">
+      <div class="flex flex-col items-center gap-5">
+        <img id="profile-image" class="w-48 rounded-xl border-4" alt="pp" />
+        <div class="flex flex-col items-center gap-1">
+          <h1 id="profile-name" class="text-2xl font-bold"></h1>
+          <div id="title" class="flex flex-col gap-1"></div>
+        </div>
+      </div>
+
+      <div>
+        <h1 class="text-md font-bold text-center mb-2">Career Objectives</h1>
+        <p id="profile-description" class="w-52 text-center text-sm text-slate-100"></p>
+      </div>
+
+      <div>
+        <h1 class="text-md font-bold text-center mb-2">Contact Information</h1>
+        <ul id="links-list" class="flex flex-col gap-2 text-xs font-medium"></ul>
+      </div>
+    </section>
+
+    <section id="details" class="scrollbar-slate-rose-300 flex h-screen w-[600px] flex-col justify-evenly overflow-y-auto overflow-x-hidden pl-3 scrollbar-thin scrollbar-thumb-slate-700">
+      <div id="education" class="p-4 pb-0 pt-0">
+        <h1 class="p-1 text-lg font-bold">Education & Certifications 📚</h1>
+        <div id="education-root" class="flex max-h-[200px] max-w-[550px] flex-col flex-wrap gap-2"></div>
+      </div>
+
+      <div id="skills" class="p-4 pb-0 pt-0">
+        <h1 class="p-1 text-lg font-bold">Skills & Tools 🛠️</h1>
+        <div id="skills-root" class="flex max-h-[100px] max-w-[550px] flex-col flex-wrap gap-2"></div>
+      </div>
+
+      <div id="projects" class="p-4 pb-0 pt-0">
+        <h1 class="p-1 text-lg font-bold">Projects 🗂️</h1>
+        <div id="projects-root" class="flex max-h-[100px] max-w-[550px] flex-col flex-wrap gap-2"></div>
+      </div>
+
+      <div id="experiences" class="p-4 pb-0 pt-0">
+        <h1 class="pb-1 text-lg font-bold">Experiences 💼</h1>
+        <div id="experiences-root" class="flex max-h-[200px] max-w-[550px] flex-col flex-wrap gap-2"></div>
+      </div>
+
+      <div id="hobbies" class="p-4 pb-0 pt-0">
+        <h1 class="pb-1 text-lg font-bold">Hobbies & Interest 🎨</h1>
+        <div id="hobbies-root" class="flex max-h-[100px] max-w-[550px] flex-col flex-wrap gap-2"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const data = {
+      profile: {
+        image: "favicon.png",
+        name: "Rexsander Torres",
+        description: "To develop innovative games by applying solid programming skills and efficient project management, while contributing to a collaborative team and delivering high-quality interactive experiences.",
+        title: [
+          { name: "Aspiring Game Developer"},
+        ],
+        links: [
+          { tag: "email", text: "rexsander12@gmail.com", prop: "mailto:", link: "rexsander12@gmail.com" },
+          { tag: "mobile", text: "+63 946 613 1834", prop: "tel:", link: "+63 946 613 1834" },
+          { tag: "facebook", text: "Rexsander Torres", prop: "", link: "https://web.facebook.com/rxsndr/" },
+          { tag: "instagram", text: "rxsndrr_", prop: "", link: "https://www.instagram.com/rxsndrr_/" },
+          { tag: "github", text: "rxndr", prop: "", link: "https://github.com/rxsndr" }
+        ],
+        education: [
+          {
+            school: "University of Caloocan City",
+            tag: "(UCC)",
+            course: "Entertainment Multimedia Computing",
+            duration: { start: "2023-08-01", end: "Present" }
+          },
+          {
+            school: "Divine Grace School",
+            tag: "(DGS)",
+            course: "Science, Technology, Engineering, and Mathematics",
+            duration: { start: "2021-08-01", end: "2023-05-31" }
+          },
+          {
+            school: "Maligaya High School",
+            tag: "(MHS)",
+            course: "HS Student",
+            duration: { start: "2017-06-01", end: "2021-05-31" }
+          }
+        ],
+        skills: [
+          { name: "Web", tools: ["HTML", "CSS", "JavaScript", "Svelte.js", "Tailwind.css"] },
+          { name: "Video Editing", tools: ["After Effects", "Premiere Pro", "Media Encoder", "Capcut"] }
+        ],
+        projects: [
+          {
+            title: "Portfolio Website",
+            status: "Complete",
+            description: "A responsive personal portfolio built with Tailwind CSS and vanilla JS.",
+            tools: ["HTML", "CSS", "JavaScript", "Svelte.js", "Tailwind.css"],
+            link: "https://example.com/portfolio"
+          },
+          {
+            title: "Feast of Legends",
+            status: "Complete",
+            description: "A small 2D platformer fighting game exploring physics and game levels.",
+            tools: ["Unity", "C#", "Aseprite"],
+            link: "https://github.com/rxsndr/unity-prototype"
+          }
+        ],
+        experiences: [
+          {
+            company: "Sanana Auto Supply",
+            title: "Automation/System Development",
+            type: "Part-time",
+            duration: { start: "2021-03-01", end: "2022-09-30" },
+            position: "Developer",
+            description: "I create automation and internal systems that help optimize, organize, and streamline our business operations."
+          },
+          {
+            company: "Sanana Auto Supply",
+            title: "Salesman/Encoder",
+            type: "Part-time",
+            duration: { start: "2021-03-01", end: "2022-09-30" },
+            position: "Assistant",
+            description: "I help my father manage his business by assisting in selling products and listing inventory items."
+          }
+        ],
+        hobbies: [
+          {
+            title: "Playing Drums 🥁"
+          },
+          {
+            title: "Listening Music 🎶"
+          },
+          {
+            title: "Drinking Coffee ☕"
+          },
+          {
+            title: "Eating 🍽️"
+          }
+        ]
+      }
+    };
+
+    // Icons for LinkButton (adjust paths to your assets)
+    const assetsBase = "./assets/";
+    const linkIcons = {
+      email: assetsBase + "mail.svg",
+      mobile: assetsBase + "phone.svg",
+      link: assetsBase + "link.svg",
+      github: assetsBase + "github.svg",
+      facebook: assetsBase + "facebook.svg",
+      instagram: assetsBase + "instagram.svg"
+    };
+    function iconForLink(tag) { return linkIcons[tag] || linkIcons.link; }
+
+    // Icons for Skills
+    const skillIcons = {
+      "after effects": assetsBase + "ae.svg",
+      "premiere pro": assetsBase + "pr.svg",
+      "media encoder": assetsBase + "ame.svg",
+      "photoshop": assetsBase + "ps.svg",
+      "adobe cep": assetsBase + "cep.svg",
+      "bolt cep": assetsBase + "bolt-cep.svg",
+      "html": assetsBase + "html.svg",
+      "css": assetsBase + "css.svg",
+      "javascript": assetsBase + "js.svg",
+      "svelte.js": assetsBase + "svelte.svg",
+      "tailwind.css": assetsBase + "tw-css.svg",
+      "google sheets": assetsBase + "sheets.svg",
+      "google workspace": assetsBase + "google.svg",
+      "microsoft office": assetsBase + "ms-office.svg",
+      "unity": assetsBase + "unity.svg",
+      "book": assetsBase + "book.svg",
+      "list": assetsBase + "list.svg",
+      "c#" : assetsBase + "c-sharp.svg",
+      "capcut": assetsBase + "capcut.svg",
+      "aseprite": assetsBase + "aseprite.svg"
+
+    };
+    function iconForTool(tool) {
+      const t = String(tool || "").toLowerCase();
+      switch (t) {
+        case "after effects": case "premiere pro": case "media encoder": case "photoshop":
+        case "adobe cep": case "bolt cep": case "html": case "css": case "javascript":
+        case "svelte.js": case "tailwind.css": case "google sheets": case "google workspace":
+        case "microsoft office": case "unity": case "c#": case "capcut": case "aseprite":
+          return skillIcons[t];
+        case "the bible":
+        case "strengths finder 2.0":
+        case "the 7 habits of highly effective people":
+        case "one 2 one by steve murrell":
+        case "the way of the shepherd by kevin leman and william pentak":
+        case "mentoring paradigms by edmund chan":
+          return skillIcons["book"];
+        case "swot & soar analysis":
+          return skillIcons["list"];
+        default:
+          return "";
+      }
+    }
+
+    // Render Profile section
+    (function renderProfile() {
+      const profile = data.profile;
+      document.getElementById("profile-image").src = profile.image || "";
+      document.getElementById("profile-name").textContent = profile.name || "";
+      document.getElementById("profile-description").textContent = profile.description || "";
+
+      const jtContainer = document.getElementById("title");
+      (profile.title || []).forEach(jt => {
+        const p = document.createElement("p");
+        p.className = "text-sm text-slate-200";
+        p.textContent = `${jt.name || ""}`;
+        jtContainer.appendChild(p);
+      });
+    })();
+
+    // Render LinkButton
+    (function renderLinks() {
+      const ul = document.getElementById("links-list");
+      (data.profile.links || []).forEach(item => {
+        const a = document.createElement("a");
+        a.href = (item.prop || "") + (item.link || "");
+        a.target = "_blank";
+
+        const li = document.createElement("li");
+        li.className = "flex w-48 items-center justify-between gap-2 rounded bg-slate-700 p-2";
+
+        const textNode = document.createTextNode(item.text || "");
+        const img = document.createElement("img");
+        img.src = iconForLink(item.tag);
+        img.className = "w-3";
+        img.alt = item.tag || "link";
+
+        li.appendChild(textNode);
+        li.appendChild(img);
+        a.appendChild(li);
+        ul.appendChild(a);
+      });
+    })();
+
+    // Render Education & Certifications
+    (function renderEducation() {
+      const root = document.getElementById("education-root");
+      const education = data.profile.education || [];
+      education.forEach(edu => {
+        const card = document.createElement("div");
+        card.className = "w-[235px] rounded-md bg-slate-100 p-2 text-sm";
+
+        const p1 = document.createElement("p");
+        p1.className = "font-medium";
+        p1.textContent = `${edu.school || ""} ${edu.tag || ""}`.trim();
+
+        const p2 = document.createElement("p");
+        p2.className = "text-[12px]";
+        p2.textContent = edu.course || "";
+
+        const p3 = document.createElement("p");
+        p3.className = "text-[11px]";
+        p3.textContent = `${edu.duration?.start || ""} ~ ${edu.duration?.end || ""}`;
+
+        card.appendChild(p1);
+        card.appendChild(p2);
+        card.appendChild(p3);
+        root.appendChild(card);
+      });
+    })();
+
+    // Render Skills
+    (function renderSkills() {
+      const root = document.getElementById("skills-root");
+      const skills = data.profile.skills || [];
+      skills.forEach(skill => {
+        const card = document.createElement("div");
+        card.className = "flex h-fit w-[235px] flex-col flex-wrap rounded-md bg-slate-100 p-2";
+
+        const title = document.createElement("h1");
+        title.className = "pb-1 text-sm font-medium";
+        title.textContent = skill.name || "";
+        card.appendChild(title);
+
+        const toolsWrap = document.createElement("div");
+        toolsWrap.className = "flex flex-wrap gap-1 text-slate-200";
+
+        (skill.tools || []).forEach(tool => {
+          const chip = document.createElement("span");
+          chip.className = "flex flex-wrap items-center gap-1 rounded-md border-none bg-gray-700 p-[4px] pr-[6px] text-[.6rem]";
+
+          const iconSpan = document.createElement("span");
+          const img = document.createElement("img");
+          const src = iconForTool(tool);
+          if (src) img.src = src;
+          img.alt = tool || "";
+          img.className = "w-4";
+          iconSpan.appendChild(img);
+
+          const label = document.createElement("p");
+          label.className = "max-w-[150px]";
+          label.textContent = tool || "";
+
+          chip.appendChild(iconSpan);
+          chip.appendChild(label);
+          toolsWrap.appendChild(chip);
+        });
+
+        card.appendChild(toolsWrap);
+        root.appendChild(card);
+      });
+    })();
+
+    // Render Projects
+    (function renderProjects() {
+      const root = document.getElementById("projects-root");
+      const projects = data.profile.projects || [];
+      projects.forEach(project => {
+        const card = document.createElement("div");
+        card.className = "flex h-fit w-[235px] flex-col gap-2 rounded-md bg-slate-100 p-3";
+
+        // Title Project - heading
+        const title = document.createElement("h2");
+        title.className = "text-sm font-semibold";
+        title.textContent = project.title || project.name || "Untitled Project";
+        card.appendChild(title);
+
+        // Status badge: Complete (green) or Ongoing (red)
+        if (project.status) {
+          const status = String(project.status).toLowerCase();
+          const badge = document.createElement("span");
+          const isComplete = status === "complete" || status === "completed";
+          badge.className = `inline-block w-fit rounded px-2 py-[2px] text-[10px] font-medium ${isComplete ? "bg-green-600 text-white" : "bg-red-600 text-white"}`;
+          badge.textContent = isComplete ? "Complete" : "Ongoing";
+          card.appendChild(badge);
+        }
+
+        // Description
+        if (project.description) {
+          const desc = document.createElement("p");
+          desc.className = "text-xs text-slate-800";
+          desc.textContent = project.description;
+          card.appendChild(desc);
+        }
+
+        // Tools chips (optional)
+        if (project.tools && project.tools.length) {
+          const toolsWrap = document.createElement("div");
+          toolsWrap.className = "flex flex-wrap gap-1 text-slate-200";
+          project.tools.forEach(tool => {
+            const chip = document.createElement("span");
+            chip.className = "flex flex-wrap items-center gap-1 rounded-md border-none bg-gray-700 p-[4px] pr-[6px] text-[.6rem]";
+
+            const iconSpan = document.createElement("span");
+            const img = document.createElement("img");
+            const src = iconForTool(tool);
+            if (src) img.src = src;
+            img.alt = tool || "";
+            img.className = "w-4";
+            iconSpan.appendChild(img);
+
+            const label = document.createElement("p");
+            label.className = "max-w-[150px]";
+            label.textContent = tool || "";
+
+            chip.appendChild(iconSpan);
+            chip.appendChild(label);
+            toolsWrap.appendChild(chip);
+          });
+          card.appendChild(toolsWrap);
+        }
+
+        root.appendChild(card);
+      });
+    })();
+
+    // Render Experiences
+    (function renderExperiences() {
+      const root = document.getElementById("experiences-root");
+      const experiences = data.profile.experiences || [];
+      experiences.forEach((experience, i) => {
+        const card = document.createElement("div");
+        card.className = "flex h-fit w-[235px] flex-col gap-1 rounded-md bg-slate-100 p-2";
+
+        const headerP = document.createElement("p");
+        headerP.className = "flex gap-1 text-xs font-medium";
+
+        const idx = document.createElement("span");
+        idx.className = "inline-block h-4 w-4 rounded-full bg-slate-700 text-center text-[.5rem] text-white";
+        idx.textContent = String(i + 1);
+
+        const companyText = document.createTextNode(" " + (experience.company || ""));
+        headerP.appendChild(idx);
+        headerP.appendChild(companyText);
+
+        const titleH3 = document.createElement("h3");
+        titleH3.className = "w-48 text-sm font-medium";
+        titleH3.textContent = `${experience.title || ""} - ${experience.type || ""}`.trim();
+
+        const datesP = document.createElement("p");
+        datesP.className = "flex items-center gap-1 text-xs";
+
+        const rangeSpan = document.createElement("span");
+        rangeSpan.className = "text-[11px]";
+        rangeSpan.textContent = `${experience.duration?.start || ""} ~ ${experience.duration?.end || ""}`;
+        datesP.appendChild(rangeSpan);
+
+        const positionP = document.createElement("p");
+        positionP.className = "text-xs font-bold";
+        positionP.textContent = experience.position || "";
+
+        const descP = document.createElement("p");
+        descP.className = "text-xs";
+        descP.textContent = experience.description || "";
+
+        card.appendChild(headerP);
+        card.appendChild(titleH3);
+        card.appendChild(datesP);
+        card.appendChild(positionP);
+        card.appendChild(descP);
+
+        root.appendChild(card);
+      });
+    })();
+
+    // Render Hobbies & Interest (title-only)
+    (function renderHobbies() {
+      const root = document.getElementById("hobbies-root");
+      const hobbies = data.profile.hobbies || [];
+      hobbies.forEach(hobby => {
+        const card = document.createElement("div");
+        card.className = "w-[235px] rounded-md bg-slate-100 p-2";
+
+        const title = document.createElement("h2");
+        title.className = "text-sm font-medium";
+        title.textContent = hobby.title || hobby.name || "";
+
+        card.appendChild(title);
+        root.appendChild(card);
+      });
+    })();
+  </script>
+</body>
+</html>
