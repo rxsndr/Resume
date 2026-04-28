@@ -57,13 +57,14 @@
   <script>
     const data = {
       profile: {
-        image: "favicon.png",
+        image: "PROFILE.jpg",
         name: "Rexsander Torres",
         description: "To develop innovative games by applying solid programming skills and efficient project management, while contributing to a collaborative team and delivering high-quality interactive experiences.",
         title: [
           { name: "Aspiring Game Developer"},
         ],
         links: [
+          { tag: "website", text: "My Portfolio", prop: "", link: "https://rxsndr.github.io/My-Portfolio/" },
           { tag: "email", text: "rexsander12@gmail.com", prop: "mailto:", link: "rexsander12@gmail.com" },
           { tag: "mobile", text: "+63 946 613 1834", prop: "tel:", link: "+63 946 613 1834" },
           { tag: "facebook", text: "Rexsander Torres", prop: "", link: "https://web.facebook.com/rxsndr/" },
@@ -98,18 +99,18 @@
         ],
         projects: [
           {
-            title: "Portfolio Website",
-            status: "Complete",
-            description: "A responsive personal portfolio built with Tailwind CSS and vanilla JS.",
-            tools: ["HTML", "CSS", "JavaScript", "Svelte.js", "Tailwind.css"],
-            link: "https://github.com/rxsndr/resume-builder-main"
+            title: "Crownless Knight",
+            status: "Ongoing",
+            description: "A fast-paced 3D roguelite dungeon crawler with survival, auto-combat, and co-op.",
+            tools: ["Unity", "C#", "Blender"],
+            link: "https://github.com/rxsndr/Crownless-Knight.git"
           },
           {
             title: "Feast of Legends",
             status: "Complete",
             description: "A small 2D platformer fighting game exploring physics and game levels.",
             tools: ["Unity", "C#", "Aseprite"],
-            link: "https://github.com/rxsndr/unity-prototype"
+            link: "https://github.com/rxsndr/Feast-of-Legends.git"
           }
         ],
         experiences: [
@@ -150,6 +151,7 @@
     // Icons for LinkButton (adjust paths to your assets)
     const assetsBase = "./assets/";
     const linkIcons = {
+      website: assetsBase + "web.svg",
       email: assetsBase + "mail.svg",
       mobile: assetsBase + "phone.svg",
       link: assetsBase + "link.svg",
